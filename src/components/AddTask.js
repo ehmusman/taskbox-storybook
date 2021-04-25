@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import Task from './Task'
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css';
 
-const AddTask = () => {
-    const initialValues = [
-        { id: 1, task: "Task 1", isCompleted: true },
-        { id: 2, task: "Task 2", isCompleted: false },
-        { id: 3, task: "Task 3", isCompleted: false },
-        { id: 4, task: "Task 4", isCompleted: false },
-        { id: 5, task: "Task 5", isCompleted: false },
-        { id: 6, task: "Task 6", isCompleted: false }
-    ]
-    const [tasks, setTasks] = useState(initialValues)
+const AddTask = ({ iValues = [] }) => {
+    // const initialValues = [
+    //     // { id: 1, task: "Task 1", isCompleted: true },
+    //     // { id: 2, task: "Task 2", isCompleted: false },
+    //     // { id: 3, task: "Task 3", isCompleted: false },
+    //     // { id: 4, task: "Task 4", isCompleted: false },
+    //     // { id: 5, task: "Task 5", isCompleted: false },
+    //     // { id: 6, task: "Task 6", isCompleted: false }
+    // ]
+    const [tasks, setTasks] = useState(iValues)
     const [task, setTask] = useState("")
     const [err, setErr] = useState(false)
 

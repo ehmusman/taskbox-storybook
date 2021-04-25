@@ -8,9 +8,9 @@ const Task = ({ task, id, isCompleted, handleCompletedTask, remove }) => {
                     <i
                         style={{ cursor: `${!isCompleted ? "pointer" : ""}` }}
                         onClick={!isCompleted ? (() => handleCompletedTask(id)) : null}
-                        className=" fas fa-check-circle mx-3"></i>
+                        className=" fa fa-check-circle mx-3"></i>
                     <i
-                        className="fas fa-trash-alt"
+                        className="fa fa-trash"
                         onClick={() => remove(id)}
                         style={{ cursor: "pointer" }}
                     >
